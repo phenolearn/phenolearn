@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1343</width>
+    <height>206</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 12pt &quot;Arial&quot;;</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="9">
+      <widget class="QLineEdit" name="lineEdit_file">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="13">
+      <widget class="QLineEdit" name="lineEdit_mask">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="7">
+      <widget class="QSpinBox" name="spinBox_scale">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>100</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="8">
+      <widget class="QPushButton" name="pushButton_file">
+       <property name="text">
+        <string>Annotation File</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_dir">
+       <property name="text">
+        <string>Image Folder</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="6">
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>Image Resize Percentage</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="12">
+      <widget class="QPushButton" name="pushButton_mask">
+       <property name="text">
+        <string>Mask Folder</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Model Type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLineEdit" name="lineEdit_dir">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Input Format</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QComboBox" name="comboBox_format">
+       <item>
+        <property name="text">
+         <string>CSV</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="12">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Batch Size</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="13">
+      <widget class="QSpinBox" name="spinBox_batch">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>64</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QComboBox" name="comboBox_cate_train">
+       <item>
+        <property name="text">
+         <string>Point</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Segmentation</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="8">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Test Set Percentage</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="9">
+      <widget class="QComboBox" name="comboBox_train_lv">
+       <item>
+        <property name="text">
+         <string>Minimal</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Intermediate</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Full</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="8">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Training Level</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="7">
+      <widget class="QLineEdit" name="lineEdit_lr">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+       <property name="text">
+        <string>0.001</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QSpinBox" name="spinBox_epoch">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>10000</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>Training Epochs</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="6">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Learning rate</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="9">
+      <widget class="QLineEdit" name="lineEdit_valid">
+       <property name="text">
+        <string>20</string>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="pushButton_train">
+     <property name="text">
+      <string>Train</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
