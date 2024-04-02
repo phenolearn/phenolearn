@@ -121,7 +121,9 @@ python phenolabel.py
 Or open the repo using [Visual studio Code](https://code.visualstudio.com/)
 The run the `phenolabel.py` file
 PhenoLearn provides an intuitive interface to easily label images for Deep Learning purposes.\
- The window when PhenoLabel starts![Main view](./assets/main.png)
+The window when PhenoLabel starts![Main view](./assets/main.png)
+
+For Windows users, a binary version of PhenoLabel (e.g., an .exe file) is available at https://zenodo.org/records/10909841.
 <br />
 
 #### PhenoTrain
