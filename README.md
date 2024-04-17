@@ -165,16 +165,17 @@ Location: `./data/demo/`
 
 120 images are in the `train` folder\
 100 images are in the `pred` folder\
-The segmentation CSV is `seg_100.csv`
-
+The segmentation CSV is `seg_train.csv`
+The name file for prediction images is `name_file_pred.csv`
 
 **3. The 220 *Littorina* images**
 
 120 images are in the `train` folder\
 100 images are in the `pred` folder\
-The segmentation CSV is `seg_100.csv`
+The Point CSV file is `pts_train.csv`
+The name file for prediction images is `name_file_pred.csv`
 
-Both dataset 2 and 3 can be download here: https://zenodo.org/records/10909780
+Both dataset 2 and 3 can be download here: https://zenodo.org/records/10988826
 
 ## Usage
 
