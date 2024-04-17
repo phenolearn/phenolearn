@@ -21,11 +21,14 @@ from torchvision import models
 import time
 
 
-from deeplearning.segmentation.engine import train_one_epoch
-from deeplearning.segmentation.engine import evaluate
 
+# for testing __main__ here
 # from segmentation.engine import train_one_epoch
 # from segmentation.engine import evaluate
+
+# for running phenotrain
+from deeplearning.segmentation.engine import train_one_epoch
+from deeplearning.segmentation.engine import evaluate
 
 
 def contour_to_seg(seg,contour_coords,value, scale):
