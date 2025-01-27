@@ -352,6 +352,24 @@ Import properties using the `Import Properties` in `File menu`.
 ![Review Assistant](./assets/review_assit.png)
 
 
+#### **Known Issues and Troubleshooting**
+
+##### **1. PyQt5 Installation on macOS**
+- **Issue**: Installing PyQt5 could happen on a macOS system may fail.  
+- **Solution**:
+  1. Install PyQt5 using Homebrew:
+     ```bash
+     brew install pyqt
+     ```
+  2. Add PyQt5 to your `PYTHONPATH` in your IDE (e.g., PyCharm).
+  3. [Reference Stack Overflow thread](https://stackoverflow.com/questions/76113859/unable-to-install-pyqt5-on-macos) for more details.
+
+##### **2. SSL Certificate Error**
+- **Issue**: The error `urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED]>` could occur when starting training with PhenoTrain on macOS.  
+- **Solution**:
+  1. Navigate to `/Applications/Python 3.x` (replace `x` with your Python version, e.g., Python 3.10).  
+  2. Double-click `Install Certificates.command` to install the SSL certificates.  
+  3. Restart your Python environment or IDE and try again.
 
 
 
