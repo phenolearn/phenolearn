@@ -19,33 +19,10 @@
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout">
-     <item row="2" column="3">
-      <widget class="QLineEdit" name="lineEdit_output">
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_2">
        <property name="text">
-        <string/>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="5">
-      <widget class="QSpinBox" name="spinBox_scale">
-       <property name="minimum">
-        <number>1</number>
-       </property>
-       <property name="maximum">
-        <number>100</number>
-       </property>
-       <property name="value">
-        <number>100</number>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QPushButton" name="pushButton_output">
-       <property name="text">
-        <string>Choose the output folder</string>
+        <string>Output Format</string>
        </property>
       </widget>
      </item>
@@ -53,36 +30,6 @@
       <widget class="QLabel" name="label">
        <property name="text">
         <string>Image Resize Percentage</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_6">
-       <property name="text">
-        <string>Model Type</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="4">
-      <widget class="QPushButton" name="pushButton_checkpoint">
-       <property name="text">
-        <string>Choose model</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QComboBox" name="comboBox_format">
-       <item>
-        <property name="text">
-         <string>CSV</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item row="0" column="6">
-      <widget class="QPushButton" name="pushButton_dir">
-       <property name="text">
-        <string>Image Folder</string>
        </property>
       </widget>
      </item>
@@ -110,10 +57,40 @@
        </item>
       </widget>
      </item>
-     <item row="0" column="2">
-      <widget class="QLabel" name="label_2">
+     <item row="0" column="8">
+      <widget class="QLineEdit" name="lineEdit_dir">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="5">
+      <widget class="QSpinBox" name="spinBox_scale">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>100</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButton_output">
        <property name="text">
-        <string>Output Format</string>
+        <string>Choose the output folder</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLineEdit" name="lineEdit_output">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
@@ -124,6 +101,20 @@
        </property>
       </widget>
      </item>
+     <item row="0" column="4">
+      <widget class="QPushButton" name="pushButton_checkpoint">
+       <property name="text">
+        <string>Choose model</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QPushButton" name="pushButton_dir">
+       <property name="text">
+        <string>Image Folder</string>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="1">
       <widget class="QLineEdit" name="lineEdit_file">
        <property name="readOnly">
@@ -131,10 +122,40 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="8">
-      <widget class="QLineEdit" name="lineEdit_dir">
-       <property name="readOnly">
-        <bool>true</bool>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Model Type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QComboBox" name="comboBox_format">
+       <item>
+        <property name="text">
+         <string>CSV</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="8">
+      <widget class="QComboBox" name="comboBox_cpu_gpu">
+       <item>
+        <property name="text">
+         <string>CPU</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GPU</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="6">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>CPU/GPU</string>
        </property>
       </widget>
      </item>

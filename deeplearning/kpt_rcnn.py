@@ -284,7 +284,7 @@ def get_pred_model(num_kpts):
     
     return model
 
-def train(csv_path,img_path,scale, lr, batch,num_epochs, test_percent,train_lv,qt_signal):
+def train(csv_path,img_path,scale, lr, batch,num_epochs, test_percent,train_lv,qt_signal, hardware_mode="GPU"):
     # initialize writer
     time_date = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M")
     # Create an experiment name
@@ -295,7 +295,11 @@ def train(csv_path,img_path,scale, lr, batch,num_epochs, test_percent,train_lv,q
 
     save_path = "saved_model/point_model_{}.pth".format(time_date)
 
-    device=torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')    
+    if hardware_mode == "GPU":
+        device=torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    elif hardware_mode == "CPU":
+        # print("using CPU in training")
+        device=torch.device('cpu')  
     if qt_signal:
         qt_signal.emit("Training on: {}".format(device) )
     
@@ -378,8 +382,13 @@ def train(csv_path,img_path,scale, lr, batch,num_epochs, test_percent,train_lv,q
    
     torch.save(model, save_path)
 
-def pred(csv_path,img_path, model_path,output_dir, scale,qt_signal):
-    device=torch.device('cuda:0' if torch.cuda.is_available() else 'cpu') 
+def pred(csv_path,img_path, model_path,output_dir, scale,qt_signal, hardware_mode = "GPU"):
+    # device=torch.device('cuda:0' if torch.cuda.is_available() else 'cpu') 
+    if hardware_mode == "GPU":
+        device=torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    elif hardware_mode == "CPU":
+        # print("using CPU in predicting")
+        device=torch.device('cpu')
     
     if qt_signal:
         qt_signal.emit("Training on: {}".format(device) )
