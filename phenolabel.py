@@ -111,8 +111,20 @@ class MainWindow(QMainWindow):
                             QColor(124,252,0,110), QColor(46,139,87,105),
                             QColor(0,255,255,106), QColor(0,0,255,107)]
 
-        self.seg_colours = [QColor(220,20,60,100), QColor(255,165,0,101),
-                            QColor(238,232,170,102), QColor(255,255,0,103)]
+        self.seg_colours = [
+            QColor(220, 20, 60, 100),    # Crimson
+            QColor(255, 165, 0, 100),    # Orange
+            QColor(238, 232, 170, 100),  # Pale Goldenrod
+            QColor(255, 255, 0, 100),    # Yellow
+            QColor(0, 128, 0, 100),      # Green
+            QColor(46, 139, 87, 100),    # Sea Green
+            QColor(0, 255, 255, 100),    # Cyan
+            QColor(0, 0, 255, 100),      # Blue
+            QColor(128, 0, 128, 100),    # Purple
+            QColor(255, 20, 147, 100),   # Deep Pink
+            QColor(139, 69, 19, 100),    # Saddle Brown
+            QColor(128, 128, 128, 100)   # Gray
+        ]
 
         self.data = Data_gui()
 
