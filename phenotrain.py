@@ -165,7 +165,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         # self.widget_dl = tab_ui.Ui_TabWidget()
-        self.setWindowTitle('PhenoTrain')
+        self.setWindowTitle('PhenoTrain_202501')
         
         self.train_ui = train_ui.Ui_Form()
         self.widget_train = QWidget()

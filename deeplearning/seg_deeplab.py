@@ -285,10 +285,10 @@ def train(img_path,scale, lr, batch,num_epochs, test_percent,train_lv, hardware_
     l=dataset.__len__()
     torch.manual_seed(1)
     indices = torch.randperm(len(dataset)).tolist()
-    dataset = torch.utils.data.Subset(dataset, indices[:-int(np.ceil(l*test_percent/100))])
+    dataset_train = torch.utils.data.Subset(dataset, indices[:-int(np.ceil(l*test_percent/100))])
     dataset_test = torch.utils.data.Subset(dataset, indices[int(-np.ceil(l*test_percent/100)):])
 
-    data_loader = torch.utils.data.DataLoader(dataset, batch_size=batch, shuffle=True, drop_last=True)
+    data_loader = torch.utils.data.DataLoader(dataset_train, batch_size=batch, shuffle=True, drop_last=True)
     data_loader_test = torch.utils.data.DataLoader(dataset_test, batch_size=1, shuffle=False)    
 
     model =get_model_with_lv(outputchannels=num_classes, train_lv=int(train_lv))

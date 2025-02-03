@@ -3,6 +3,7 @@ __pycache__/
 
 # data/*
 !data/bird_10
+data_dl/*
 
 assets/*edi.pptx
 assets/img/
