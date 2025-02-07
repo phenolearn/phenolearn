@@ -763,7 +763,7 @@ class Data():
 
         cur_seg_names = list(self.get_current_image_segments_cv().keys())
         if seg_name not in cur_seg_names:
-            self.get_current_image_segments_cv()[seg_name]={"contours":None}
+            self.get_current_image_segments_cv()[seg_name]={"contours":[]}
             self.seg_names.add(seg_name)
             self.changed = True
             
