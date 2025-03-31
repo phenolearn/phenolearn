@@ -539,6 +539,9 @@ class MainWindow(QMainWindow):
         self.toolbar.addAction(self.act_attention_imgs_only)
         self.toolbar.addSeparator()
         self.toolbar.addAction(self.act_quick_label_mode)
+        self.toolbar.addSeparator()
+        self.toolbar.addAction(self.act_quick_label_mode)
+
 
         self.toolbar_outline =QToolBar("Outline")
         self.toolbar_outline.addActions(self.act_group_brush_cate.actions())
@@ -1144,7 +1147,7 @@ class MainWindow(QMainWindow):
             self.widget_segment_list.setCurrentRow(0)
             self.update_segment_drawing()
 
-    def list_seg_name(self):
+    def list_seg_name(self, selected_row="default"):
         """List segmentation to the seg list widget in the annotation panel
         Using segs_name_id_map
         Combining segmentation name and colour information into a dict
@@ -1183,8 +1186,10 @@ class MainWindow(QMainWindow):
                 item.setIcon(QIcon(icon))
 
                 self.widget_segment_list.addItem(item)
-
-            self.widget_segment_list.setCurrentRow(0)
+            if selected_row =="default":
+                self.widget_segment_list.setCurrentRow(0)
+            elif selected_row =="added":
+                self.widget_segment_list.setCurrentRow(self.widget_segment_list.count()-1)
             self.update_segment_drawing()
 
     def list_properties(self):
@@ -1517,7 +1522,7 @@ class MainWindow(QMainWindow):
             if name:
                 if self.data.add_seg_for_current_img(name):
                     # print("added")
-                    self.list_seg_name()
+                    self.list_seg_name(selected_row="added")
                 else:
                     QMessageBox.about(self, "Failed", "Fail to add the label\nname is duplicate.")
 
