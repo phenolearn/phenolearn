@@ -539,8 +539,7 @@ class MainWindow(QMainWindow):
         self.toolbar.addAction(self.act_attention_imgs_only)
         self.toolbar.addSeparator()
         self.toolbar.addAction(self.act_quick_label_mode)
-        self.toolbar.addSeparator()
-        self.toolbar.addAction(self.act_quick_label_mode)
+      
 
 
         self.toolbar_outline =QToolBar("Outline")
@@ -971,7 +970,8 @@ class MainWindow(QMainWindow):
                 #     self.widget_file_list.addItem(img.img_name)
                 # for img_name,_ in self.data.images.items():
                 #     self.widget_file_list.addItem(img_name)
-                for img_name in self.data.img_id_order:
+                sorted_img_names = sorted(self.data.img_id_order)
+                for img_name in sorted_img_names:
                     self.widget_file_list.addItem(img_name)
 
                 self.widget_annotation.has_no_hidden = self.hide_file_names()
